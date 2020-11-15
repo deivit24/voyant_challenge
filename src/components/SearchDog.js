@@ -1,12 +1,12 @@
 import React, { useState, useContext } from 'react';
-import { useHistory, useParams, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import DogContext from '../_helpers/DogContext';
 
 const INIT_STATE = {
   search: '',
 };
 const SearchDog = () => {
-  const { dogs, setDogs } = useContext(DogContext);
+  const { dogs } = useContext(DogContext);
   const [values, setValues] = useState(INIT_STATE);
   const { search } = values;
   const [found, setFound] = useState([]);

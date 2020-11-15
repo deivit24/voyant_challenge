@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import DogContext from './_helpers/DogContext';
 import NavBar from './components/Navbar';
 import Routes from './components/Routes';
