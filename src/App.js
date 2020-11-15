@@ -1,25 +1,20 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
+import DogContext from './_helpers/DogContext';
+import NavBar from './components/Navbar';
+import Routes from './components/Routes';
+import data from './data';
 import './App.css';
 
-function App() {
+const App = () => {
+  const [dogs, setDogs] = useState(data);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <DogContext.Provider value={{ dogs, setDogs }}>
+      <div className="App">
+        <NavBar />
+        <Routes />
+      </div>
+    </DogContext.Provider>
   );
-}
+};
 
 export default App;

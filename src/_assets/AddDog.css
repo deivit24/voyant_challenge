@@ -1,0 +1,30 @@
+#Add-Dog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#Add-Dog .form-box {
+  max-width: 360px;
+  padding: 20px;
+  margin-top: 20%;
+  box-shadow: 0 0 25px 3px #afafaf;
+  border-radius: 25px;
+  z-index: 2;
+}
+#Add-Dog .form-box .form-title {
+  background: #3f50b5;
+  color: white;
+  text-align: center;
+  padding: 30px 0px;
+  position: relative;
+  margin-top: -50px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  z-index: 20;
+}
+#Add-Dog .form-box .text-field {
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+}
