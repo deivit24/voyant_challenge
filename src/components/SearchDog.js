@@ -25,6 +25,9 @@ const SearchDog = () => {
     });
 
     setFound(found);
+  };
+  const resetSearch = (e) => {
+    e.preventDefault();
     setValues(INIT_STATE);
   };
   let searchResults;
@@ -79,6 +82,7 @@ const SearchDog = () => {
                 type="button"
                 className="close"
                 data-dismiss="modal"
+                onClick={resetSearch}
                 aria-label="Close"
               >
                 <span aria-hidden="true">&times;</span>
@@ -92,6 +96,7 @@ const SearchDog = () => {
                 type="button"
                 className="btn btn-secondary"
                 data-dismiss="modal"
+                onClick={resetSearch}
               >
                 Close
               </button>
